@@ -15,7 +15,6 @@ const projects = [
   { number: "02", title: "Baseline Refactor Assistant", text: "A developer tool for making codebase refactors clearer and more reliable.", url: "https://github.com/alexajunior/baseline-refactor-assistant" },
   { number: "03", title: "NurseFlow", text: "AI for busy nurses, designed around practical clinical workflows.", url: "https://github.com/alexajunior/NurseFlow" },
   { number: "04", title: "AeroHealth", text: "Mobile and web experiences for accessible health technology.", url: "https://github.com/alexajunior/AeroHealth-Mobile-App" },
-  { number: "05", title: "BIOMENTARY", text: "A PDF-to-video experiment for turning documents into stories.", url: "https://github.com/alexajunior/BIOMENTARY" },
 ];
 
 const faqs = [
