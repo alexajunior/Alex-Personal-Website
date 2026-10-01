@@ -166,7 +166,7 @@ function App() {
               ) : (
                 <span className="organizations-label" key={`${name}-${index}`}>{name}</span>
               );
-            ))}
+            })}
           </div>
         </section>
 
