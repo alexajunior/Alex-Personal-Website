@@ -35,12 +35,17 @@ function IntroVideo() {
     if (!video) return undefined;
     const updateProgress = () => setProgress(video.duration ? video.currentTime / video.duration : 0);
     const setVideoDuration = () => setDuration(video.duration || 0);
+    const syncVolume = () => setVolume(video.muted ? 0 : video.volume);
+    video.volume = 1;
+    video.muted = false;
     video.addEventListener("timeupdate", updateProgress);
     video.addEventListener("loadedmetadata", setVideoDuration);
+    video.addEventListener("volumechange", syncVolume);
     video.addEventListener("ended", () => setPlaying(false));
     return () => {
       video.removeEventListener("timeupdate", updateProgress);
       video.removeEventListener("loadedmetadata", setVideoDuration);
+      video.removeEventListener("volumechange", syncVolume);
     };
   }, []);
 
@@ -48,6 +53,8 @@ function IntroVideo() {
     const video = videoRef.current;
     if (!video) return;
     if (video.paused) {
+      video.muted = false;
+      video.volume = volume || 1;
       video.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
     } else {
       video.pause();
@@ -63,7 +70,10 @@ function IntroVideo() {
   const changeVolume = (event) => {
     const nextVolume = Number(event.target.value);
     setVolume(nextVolume);
-    if (videoRef.current) videoRef.current.volume = nextVolume;
+    if (videoRef.current) {
+      videoRef.current.muted = nextVolume === 0;
+      videoRef.current.volume = nextVolume;
+    }
   };
 
   return (
