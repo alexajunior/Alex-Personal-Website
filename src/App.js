@@ -29,6 +29,10 @@ const organizations = [
   { name: "Harvard University", logo: "https://www.google.com/s2/favicons?domain=harvard.edu&sz=128" },
   { name: "Royal Commonwealth Society", logo: "https://www.google.com/s2/favicons?domain=royalcwsociety.org&sz=128" },
   { name: "Forbes BLK", logo: "https://www.google.com/s2/favicons?domain=forbes.com&sz=128" },
+  { name: "Notion", logo: "https://www.google.com/s2/favicons?domain=notion.so&sz=128" },
+  { name: "Major League Hacking", logo: "https://www.google.com/s2/favicons?domain=mlh.io&sz=128" },
+  { name: "Hacktoberfest", logo: "https://www.google.com/s2/favicons?domain=hacktoberfest.com&sz=128" },
+  { name: "Adobe", logo: "https://www.google.com/s2/favicons?domain=adobe.com&sz=128" },
 ];
 
 const faqs = [
