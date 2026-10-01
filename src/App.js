@@ -33,6 +33,7 @@ function App() {
           <nav className={menuOpen ? "main-nav is-open" : "main-nav"} aria-label="Primary navigation">
             <a href="#work" onClick={closeMenu}>The work</a>
             <a href="#about" onClick={closeMenu}>About Alex</a>
+            <a href="#speaker" onClick={closeMenu}>Public Speaking</a>
             <a href="#blog" onClick={closeMenu}>Blog</a>
             <a href="#faq" onClick={closeMenu}>FAQ</a>
             <a className="nav-button" href="#contact" onClick={closeMenu}>Let&apos;s talk <Arrow /></a>
@@ -78,7 +79,7 @@ function App() {
         <section id="speaker" className="section speaker-section">
           <div className="container speaker-grid">
             <div className="section-kicker"><span>03</span><span>featured_speaker();</span></div>
-            <div className="speaker-content"><p className="terminal-line"><span className="prompt">&gt;_</span> on_the_stage</p><h2>Ideas built for the <span>real world.</span></h2><p className="large-copy">Featured speaker and presenter on building resilient technology for communities where connectivity cannot be assumed.</p><div className="speaker-events"><div><strong>AWS re:Invent 2025</strong><span>Featured presentation</span></div><div><strong>World Bank Summit 2026 (Online)</strong><span>Featured presentation</span></div></div><a className="text-link speaker-link" href="https://reg.githubuniverse.com/flow/github/universe26/attendee-portal/page/sessioncatalog/session/1775902696655001nnFo" target="_blank" rel="noreferrer">View speaker session <Arrow /></a></div>
+            <div className="speaker-content"><article className="speaker-card"><div className="speaker-card-label"><i /> Featured speaker</div><span className="speaker-card-type">Session</span><h2>Lessons from building tech in a low-connectivity community</h2><p>Most software assumes fast internet, cloud sync, and always-on connectivity. Alex A. Junior shares lessons from building CarbonSight, an offline-first carbon footprint tracker for low-connectivity communities—including architecture, data sync, conflict resolution, and the UX decisions that low-connectivity forces you to make.</p><div className="speaker-card-meta"><span>Speaker · Founder, Braveon AI</span><span>AWS re:Invent 2025 · World Bank Summit 2026 (Online)</span></div><a className="speaker-card-link" href="https://reg.githubuniverse.com/flow/github/universe26/attendee-portal/page/sessioncatalog/session/1775902696655001nnFo" target="_blank" rel="noreferrer">View Alex&apos;s session <Arrow /></a><strong className="speaker-stat">200+<small>YOUNG PEOPLE MENTORED</small></strong></article></div>
           </div>
         </section>
 
@@ -87,11 +88,7 @@ function App() {
             <div className="section-kicker"><span>04</span><span>experience_and_learning();</span></div>
             <div className="split-heading"><h2>Every project<br />leaves a <em>trace.</em></h2><p>Explore Alex&apos;s professional background and review the portfolio content directly in the certifications area.</p></div>
             <div className="credential-row"><span>Experience</span><strong>Professional background</strong><a href="#contact">Ask Alex <Arrow /></a></div>
-            <div className="credential-row"><span>Certifications</span><strong>Portfolio and verified learning</strong><a href="#portfolio-document">View below <Arrow /></a></div>
-            <div id="portfolio-document" className="portfolio-document">
-              <div className="document-heading"><span>certifications.pdf</span><span>embedded_document</span></div>
-              <iframe title="Alex A. Junior portfolio and certifications" src="/Alex-A-Junior-portfolio.pdf" />
-            </div>
+            <div className="credential-row"><span>Certifications</span><strong>Portfolio and verified learning</strong><a className="view-only-link" href="/Alex-A-Junior-portfolio.pdf" target="_blank" rel="noreferrer">View certifications <Arrow /></a></div>
           </div>
         </section>
 
