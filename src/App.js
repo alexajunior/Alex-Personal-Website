@@ -18,17 +18,17 @@ const projects = [
 ];
 
 const organizations = [
-  { name: "Tableau", logo: "https://cdn.simpleicons.org/tableau" },
-  { name: "World Bank Group", logo: "https://cdn.simpleicons.org/worldbank" },
-  { name: "PyCon DE", logo: "https://cdn.simpleicons.org/python" },
-  { name: "EuroPython", logo: "https://cdn.simpleicons.org/python" },
-  { name: "NASA Space Apps", logo: "https://cdn.simpleicons.org/nasa" },
-  { name: "McKinsey.org", logo: "https://cdn.simpleicons.org/mckinsey" },
-  { name: "Blue Ocean", logo: "https://cdn.simpleicons.org/blueocean" },
-  { name: "Aspire Institute", logo: "https://cdn.simpleicons.org/aspire" },
-  { name: "Harvard University", logo: "https://cdn.simpleicons.org/harvard" },
-  { name: "Royal Commonwealth Society", logo: "https://cdn.simpleicons.org/commonwealth" },
-  { name: "Forbes BLK", logo: "https://cdn.simpleicons.org/forbes" },
+  { name: "Tableau", logo: "https://www.google.com/s2/favicons?domain=tableau.com&sz=128" },
+  { name: "World Bank Group", logo: "https://www.google.com/s2/favicons?domain=worldbank.org&sz=128" },
+  { name: "PyCon DE", logo: "https://www.google.com/s2/favicons?domain=pycon.de&sz=128" },
+  { name: "EuroPython", logo: "https://www.google.com/s2/favicons?domain=europython.eu&sz=128" },
+  { name: "NASA Space Apps", logo: "https://www.google.com/s2/favicons?domain=spaceappschallenge.org&sz=128" },
+  { name: "McKinsey.org", logo: "https://www.google.com/s2/favicons?domain=mckinsey.org&sz=128" },
+  { name: "Blue Ocean", logo: "https://www.google.com/s2/favicons?domain=blueocean.org&sz=128" },
+  { name: "Aspire Institute", logo: "https://www.google.com/s2/favicons?domain=aspireinstitute.org&sz=128" },
+  { name: "Harvard University", logo: "https://www.google.com/s2/favicons?domain=harvard.edu&sz=128" },
+  { name: "Royal Commonwealth Society", logo: "https://www.google.com/s2/favicons?domain=royalcwsociety.org&sz=128" },
+  { name: "Forbes BLK", logo: "https://www.google.com/s2/favicons?domain=forbes.com&sz=128" },
 ];
 
 const faqs = [
