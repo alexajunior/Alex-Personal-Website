@@ -86,7 +86,7 @@ function App() {
         <section id="work" className="section section-dark">
           <div className="container">
             <div className="section-kicker"><span>02</span><span>the_work();</span></div>
-            <div className="split-heading"><h2>Make the<br /><em>complex</em> clear.</h2><p>Good digital work earns attention by being useful first. These are the places where Alex brings curiosity, craft, and momentum.</p></div>
+            <div className="split-heading"><h2>Making the<br /><em>complex</em> clear.</h2><p>Good digital work earns attention by being useful first. These are the places where Alex brings curiosity, craft, and momentum.</p></div>
             <div className="work-grid">{workAreas.map((area) => <article className="work-card" key={area.number}><span className="card-number">{area.number}</span><h3>{area.title}</h3><p>{area.text}</p><span className="card-arrow">↗</span></article>)}</div>
           </div>
         </section>
