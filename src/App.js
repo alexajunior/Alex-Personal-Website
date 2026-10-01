@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
 
 const Arrow = () => <span className="arrow" aria-hidden="true">↗</span>;
@@ -22,6 +22,65 @@ const faqs = [
   ["Are you available for new opportunities?", "Yes. The best way to start a conversation is by email or LinkedIn."],
   ["Where can I see more work?", "Visit GitHub for code and experiments, or review the portfolio and certifications below."],
 ];
+
+function IntroVideo() {
+  const videoRef = useRef(null);
+  const [playing, setPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [volume, setVolume] = useState(1);
+  const [duration, setDuration] = useState(0);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return undefined;
+    const updateProgress = () => setProgress(video.duration ? video.currentTime / video.duration : 0);
+    const setVideoDuration = () => setDuration(video.duration || 0);
+    video.addEventListener("timeupdate", updateProgress);
+    video.addEventListener("loadedmetadata", setVideoDuration);
+    video.addEventListener("ended", () => setPlaying(false));
+    return () => {
+      video.removeEventListener("timeupdate", updateProgress);
+      video.removeEventListener("loadedmetadata", setVideoDuration);
+    };
+  }, []);
+
+  const togglePlayback = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (video.paused) {
+      video.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+    } else {
+      video.pause();
+      setPlaying(false);
+    }
+  };
+
+  const seek = (event) => {
+    const video = videoRef.current;
+    if (video && duration) video.currentTime = Number(event.target.value) * duration;
+  };
+
+  const changeVolume = (event) => {
+    const nextVolume = Number(event.target.value);
+    setVolume(nextVolume);
+    if (videoRef.current) videoRef.current.volume = nextVolume;
+  };
+
+  return (
+    <div className="video-player">
+      <video ref={videoRef} controls={false} playsInline preload="metadata" poster="/intro-poster.png" aria-label="Alex A. Junior introductory video">
+        <source src="/intro.mp4" type="video/mp4" />
+        Your browser does not support the video player.
+      </video>
+      <div className="video-controls" aria-label="Video controls">
+        <button type="button" className="video-control-button" onClick={togglePlayback} aria-label={playing ? "Pause video" : "Play video"}>{playing ? "❚❚" : "▶"}</button>
+        <input className="video-progress" type="range" min="0" max="1" step="0.001" value={progress} onChange={seek} aria-label="Video progress" />
+        <button type="button" className="video-control-button" onClick={() => changeVolume({ target: { value: volume ? 0 : 1 } })} aria-label={volume ? "Mute video" : "Unmute video"}>{volume ? "🔊" : "🔇"}</button>
+        <input className="video-volume" type="range" min="0" max="1" step="0.01" value={volume} onChange={changeVolume} aria-label="Video volume" />
+      </div>
+    </div>
+  );
+}
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -74,12 +133,7 @@ function App() {
           <div className="container">
             <div className="section-kicker"><span>01</span><span>introductory_video();</span></div>
             <div className="split-heading"><h2>Meet Alex<br /><em>in motion.</em></h2><p>A short introduction to Alex&apos;s work, ideas, and the problems he is building to solve.</p></div>
-            <div className="video-frame">
-              <video controls controlsList="nodownload" disablePictureInPicture playsInline preload="metadata" poster="/intro-poster.png" aria-label="Alex A. Junior introductory video">
-                <source src="/intro.mp4" type="video/mp4" />
-                Your browser does not support the video player.
-              </video>
-            </div>
+            <div className="video-frame"><IntroVideo /></div>
           </div>
         </section>
 
