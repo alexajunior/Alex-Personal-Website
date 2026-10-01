@@ -26,7 +26,7 @@
 .hero-grid:after { content: ""; position: absolute; width: 310px; height: 310px; border-radius: 50%; background: var(--green); right: 18%; top: 29%; box-shadow: 0 0 0 32px #dafbe1, 0 0 0 64px #f6f8fa; }
 .hero-grid span { position: absolute; z-index: 1; width: 12px; height: 12px; border-radius: 50%; background: var(--ink); }
 .hero-grid span:nth-child(1) { top: 27%; right: 24%; }.hero-grid span:nth-child(2) { top: 62%; right: 45%; }.hero-grid span:nth-child(3) { top: 80%; right: 12%; }.hero-grid span:nth-child(4) { top: 18%; right: 8%; }.hero-grid span:nth-child(5) { top: 74%; right: 31%; }.hero-grid span:nth-child(6) { top: 45%; right: 6%; }
-.hero-portrait { position: absolute; z-index: 2; right: 15%; bottom: 0; width: min(330px, 34vw); max-height: 620px; object-fit: contain; object-position: bottom; mix-blend-mode: multiply; }
+.hero-portrait { position: absolute; z-index: 2; right: 15%; bottom: 0; width: min(330px, 34vw); max-height: 620px; object-fit: contain; object-position: bottom; mix-blend-mode: screen; filter: grayscale(.35) contrast(1.18); -webkit-mask-image: radial-gradient(ellipse 76% 84% at 50% 61%, #000 46%, rgba(0,0,0,.9) 61%, transparent 82%); mask-image: radial-gradient(ellipse 76% 84% at 50% 61%, #000 46%, rgba(0,0,0,.9) 61%, transparent 82%); }
 .signal-strip { background: #f6f8fa; color: var(--green-deep); overflow: hidden; padding: 17px 0; border-top: 1px solid #d0d7de; border-bottom: 1px solid #d0d7de; }
 .signal-track { display: flex; width: max-content; gap: 42px; animation: ticker 24s linear infinite; text-transform: uppercase; font: 11px "DM Mono", monospace; letter-spacing: .12em; }
 .signal-track b { color: #8b949e; margin-left: 35px; } @keyframes ticker { to { transform: translateX(-50%); } }
