@@ -13,7 +13,7 @@ const workAreas = [
 const faqs = [
   ["What does Alex work on?", "Alex works across frontend engineering, digital products, and thoughtful design systems."],
   ["Are you available for new opportunities?", "Yes. The best way to start a conversation is by email or LinkedIn."],
-  ["Where can I see more work?", "Visit GitHub for code and experiments, or download the portfolio for a concise overview."],
+  ["Where can I see more work?", "Visit GitHub for code and experiments, or review the portfolio and certifications below."],
 ];
 
 function App() {
@@ -47,7 +47,7 @@ function App() {
             <p className="hero-lede">Alex A. Junior is a digital builder making useful products, expressive interfaces, and ambitious ideas easier to experience.</p>
             <div className="hero-actions">
               <a className="button button-green" href="#work">Explore the work <Arrow /></a>
-              <a className="text-link" href="/Alex-A-Junior-portfolio.pdf" target="_blank" rel="noreferrer">Download portfolio <Arrow /></a>
+              <a className="text-link" href="#certifications">View certifications <Arrow /></a>
             </div>
             <div className="hero-meta"><span>Based in Ghana</span><span>Open to opportunities</span><span>Scroll to explore ↓</span></div>
           </div>
@@ -73,12 +73,16 @@ function App() {
           </div>
         </section>
 
-        <section className="section credentials-section">
+        <section id="certifications" className="section credentials-section">
           <div className="container">
             <div className="section-kicker"><span>03</span><span>experience_and_learning();</span></div>
-            <div className="split-heading"><h2>Every project<br />leaves a <em>trace.</em></h2><p>Experience and certifications will grow here as the portfolio grows. For now, start with the full profile.</p></div>
-            <div className="credential-row"><span>Experience</span><strong>Professional background</strong><a href="/Alex-A-Junior-portfolio.pdf" target="_blank" rel="noreferrer">View portfolio <Arrow /></a></div>
-            <div className="credential-row"><span>Certifications</span><strong>Verified learning and credentials</strong><a href="#contact">Ask Alex <Arrow /></a></div>
+            <div className="split-heading"><h2>Every project<br />leaves a <em>trace.</em></h2><p>Explore Alex&apos;s professional background and review the portfolio content directly in the certifications area.</p></div>
+            <div className="credential-row"><span>Experience</span><strong>Professional background</strong><a href="#contact">Ask Alex <Arrow /></a></div>
+            <div className="credential-row"><span>Certifications</span><strong>Portfolio and verified learning</strong><a href="#portfolio-document">View below <Arrow /></a></div>
+            <div id="portfolio-document" className="portfolio-document">
+              <div className="document-heading"><span>certifications.pdf</span><span>embedded_document</span></div>
+              <iframe title="Alex A. Junior portfolio and certifications" src="/Alex-A-Junior-portfolio.pdf" />
+            </div>
           </div>
         </section>
 
