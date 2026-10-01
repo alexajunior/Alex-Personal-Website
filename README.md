@@ -1,5 +1,5 @@
-# Alex A. Junior — Personal Website
+# Personal Website
 
-Personal portfolio for Alex A. Junior, built as a dark, GitHub-inspired profile for digital work, experience, and contact.
+Personal portfolio.
 
 Live at [alexajunior.me](https://alexajunior.me/).
