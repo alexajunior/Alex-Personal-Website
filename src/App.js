@@ -57,7 +57,7 @@ function App() {
             <p className="hero-lede">Alex A. Junior is a software developer and young innovator who builds technology that works where internet access is limited.</p>
             <div className="hero-actions">
               <a className="button button-green" href="#work">Explore the work <Arrow /></a>
-              <a className="button button-certifications" href="#certifications">See certifications <Arrow /></a>
+              <a className="button button-certifications" href="/Alex-A-Junior-portfolio.pdf" target="_blank" rel="noreferrer">See certifications <Arrow /></a>
             </div>
             <div className="hero-meta"><span>Available</span><span>Scroll to explore ↓</span></div>
           </div>
