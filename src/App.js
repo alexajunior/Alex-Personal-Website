@@ -17,6 +17,20 @@ const projects = [
   { number: "04", title: "AeroHealth", text: "Mobile and web experiences for accessible health technology.", url: "https://github.com/alexajunior/AeroHealth-Mobile-App" },
 ];
 
+const organizations = [
+  { name: "Tableau", logo: "https://cdn.simpleicons.org/tableau" },
+  { name: "World Bank Group", logo: "https://cdn.simpleicons.org/worldbank" },
+  { name: "PyCon DE", logo: "https://cdn.simpleicons.org/python" },
+  { name: "EuroPython", logo: "https://cdn.simpleicons.org/python" },
+  { name: "NASA Space Apps", logo: "https://cdn.simpleicons.org/nasa" },
+  { name: "McKinsey.org", logo: "https://cdn.simpleicons.org/mckinsey" },
+  { name: "Blue Ocean", logo: "https://cdn.simpleicons.org/blueocean" },
+  { name: "Aspire Institute", logo: "https://cdn.simpleicons.org/aspire" },
+  { name: "Harvard University", logo: "https://cdn.simpleicons.org/harvard" },
+  { name: "Royal Commonwealth Society", logo: "https://cdn.simpleicons.org/commonwealth" },
+  { name: "Forbes BLK", logo: "https://cdn.simpleicons.org/forbes" },
+];
+
 const faqs = [
   ["What does Alex work on?", "Alex works across frontend engineering, digital products, and thoughtful design systems."],
   ["Are you available for new opportunities?", "Yes. The best way to start a conversation is by email or LinkedIn."],
@@ -139,9 +153,24 @@ function App() {
           <div className="signal-track"><span>Code <b>✦</b></span><span>Design <b>✦</b></span><span>Ideas <b>✦</b></span><span>Impact <b>✦</b></span><span>Code <b>✦</b></span><span>Design <b>✦</b></span><span>Ideas <b>✦</b></span><span>Impact <b>✦</b></span></div>
         </section>
 
+        <section className="section organizations-section" aria-labelledby="organizations-heading">
+          <div className="container">
+            <div className="section-kicker"><span>01</span><span>trusted_by();</span></div>
+            <div className="organizations-heading"><h2 id="organizations-heading">Companies &amp; organizations<br /><em>I&apos;ve worked with.</em></h2><p>Collaborations, communities, and institutions connected to Alex&apos;s work.</p></div>
+            <div className="organizations-grid">
+              {organizations.map((organization) => (
+                <div className="organization-logo" key={organization.name}>
+                  <img src={organization.logo} alt={`${organization.name} logo`} loading="lazy" />
+                  <span>{organization.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="introductory-video" className="section video-section">
           <div className="container">
-            <div className="section-kicker"><span>01</span><span>introductory_video();</span></div>
+            <div className="section-kicker"><span>02</span><span>introductory_video();</span></div>
             <div className="split-heading"><h2>Meet Alex<br /><em>in motion.</em></h2><p>A short introduction to Alex&apos;s work, ideas, and the problems he is building to solve.</p></div>
             <div className="video-frame"><IntroVideo /></div>
           </div>
