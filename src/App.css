@@ -21,6 +21,7 @@
 .button-green { background: var(--green); color: #0d1117; }
 .button-green:hover { background: #a7f3b0; }
 .text-link { color: var(--ink); border-bottom: 1px solid currentColor; padding-bottom: 4px; font: 12px "DM Mono", monospace; }
+.certification-link { color: #fff; }
 .hero-meta { display: flex; gap: 40px; margin-top: 130px; color: #69737d; font: 10px "DM Mono", monospace; text-transform: uppercase; }
 .hero-grid { position: absolute; inset: 0 0 0 52%; background-image: linear-gradient(#dce2e7 1px, transparent 1px), linear-gradient(90deg, #dce2e7 1px, transparent 1px); background-size: 65px 65px; mask-image: linear-gradient(to right, transparent, #000); opacity: .8; }
 .hero-grid:after { content: ""; position: absolute; width: 310px; height: 310px; border-radius: 50%; background: var(--green); right: 18%; top: 29%; box-shadow: 0 0 0 32px #dafbe1, 0 0 0 64px #f6f8fa; }
