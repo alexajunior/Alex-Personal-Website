@@ -24,8 +24,8 @@ const organizations = [
   { name: "EuroPython", logo: "https://www.google.com/s2/favicons?domain=europython.eu&sz=128" },
   { name: "NASA Space Apps", logo: "https://www.google.com/s2/favicons?domain=spaceappschallenge.org&sz=128" },
   { name: "McKinsey.org", logo: "https://www.google.com/s2/favicons?domain=mckinsey.org&sz=128" },
-  { name: "Blue Ocean", logo: "https://www.google.com/s2/favicons?domain=blueocean.org&sz=128" },
-  { name: "Aspire Institute", logo: "https://www.google.com/s2/favicons?domain=aspireinstitute.org&sz=128" },
+  { name: "Blue Ocean", logo: "https://www.google.com/s2/favicons?domain=blueoceanstrategy.com&sz=128" },
+  { name: "Aspire Institute", logo: "https://www.google.com/s2/favicons?domain=aspireleaders.org&sz=128" },
   { name: "Harvard University", logo: "https://www.google.com/s2/favicons?domain=harvard.edu&sz=128" },
   { name: "Royal Commonwealth Society", logo: "https://www.google.com/s2/favicons?domain=royalcwsociety.org&sz=128" },
   { name: "Forbes BLK", logo: "https://www.google.com/s2/favicons?domain=forbes.com&sz=128" },
@@ -156,11 +156,16 @@ function App() {
 
         <section className="organizations-strip" aria-label="Companies and organizations Alex has worked with">
           <div className="organizations-track">
-            {[...organizations, ...organizations].map((organization, index) => (
-              <div className="organization-logo" key={`${organization.name}-${index}`}>
-                <img src={organization.logo} alt="" loading="lazy" />
-                <span>{organization.name}</span>
-              </div>
+            {["Worked with", ...organizations.map((organization) => organization.name), "Worked with", ...organizations.map((organization) => organization.name)].map((name, index) => {
+              const organization = organizations.find((item) => item.name === name);
+              return organization ? (
+                <div className="organization-logo" key={`${name}-${index}`}>
+                  <img src={organization.logo} alt="" loading="lazy" />
+                  <span>{name}</span>
+                </div>
+              ) : (
+                <span className="organizations-label" key={`${name}-${index}`}>{name}</span>
+              );
             ))}
           </div>
         </section>
