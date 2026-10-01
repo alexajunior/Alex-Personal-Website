@@ -25,7 +25,7 @@ function App() {
       <header className="site-header">
         <div className="container nav-wrap">
           <a className="brand" href="#top" onClick={closeMenu} aria-label="Alex A. Junior home">
-            <span className="brand-prompt">&gt;_</span><span>Alex A. Junior</span>
+            <span className="brand-prompt">&gt;_</span><span>Alex A. Junior</span><small>Software Developer</small>
           </a>
           <button className="menu-toggle" type="button" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
             <span>{menuOpen ? "Close" : "Menu"}</span><span className="menu-lines"><i /><i /></span>
@@ -78,7 +78,7 @@ function App() {
         <section id="speaker" className="section speaker-section">
           <div className="container speaker-grid">
             <div className="section-kicker"><span>03</span><span>featured_speaker();</span></div>
-            <div className="speaker-content"><p className="terminal-line"><span className="prompt">&gt;_</span> on_the_stage</p><h2>Ideas built for the <span>real world.</span></h2><p className="large-copy">Featured speaker and presenter on building resilient technology for communities where connectivity cannot be assumed.</p><div className="speaker-events"><div><strong>AWS re:Invent 2025</strong><span>Featured presentation</span></div><div><strong>World Bank Summit 2026 (Online)</strong><span>Featured presentation</span></div></div></div>
+            <div className="speaker-content"><p className="terminal-line"><span className="prompt">&gt;_</span> on_the_stage</p><h2>Ideas built for the <span>real world.</span></h2><p className="large-copy">Featured speaker and presenter on building resilient technology for communities where connectivity cannot be assumed.</p><div className="speaker-events"><div><strong>AWS re:Invent 2025</strong><span>Featured presentation</span></div><div><strong>World Bank Summit 2026 (Online)</strong><span>Featured presentation</span></div></div><a className="text-link speaker-link" href="https://reg.githubuniverse.com/flow/github/universe26/attendee-portal/page/sessioncatalog/session/1775902696655001nnFo" target="_blank" rel="noreferrer">View speaker session <Arrow /></a></div>
           </div>
         </section>
 
