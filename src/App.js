@@ -75,7 +75,7 @@ function App() {
             <div className="section-kicker"><span>01</span><span>introductory_video();</span></div>
             <div className="split-heading"><h2>Meet Alex<br /><em>in motion.</em></h2><p>A short introduction to Alex&apos;s work, ideas, and the problems he is building to solve.</p></div>
             <div className="video-frame">
-              <video controls controlsList="nodownload" disablePictureInPicture playsInline preload="metadata" aria-label="Alex A. Junior introductory video">
+              <video controls controlsList="nodownload" disablePictureInPicture playsInline preload="metadata" poster="/intro-poster.png" aria-label="Alex A. Junior introductory video">
                 <source src="/intro.mp4" type="video/mp4" />
                 Your browser does not support the video player.
               </video>
