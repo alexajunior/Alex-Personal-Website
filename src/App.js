@@ -251,10 +251,11 @@ function App() {
       </main>
 
       <footer className="site-footer"><div className="container footer-top"><a className="brand" href="#top"><span className="brand-prompt">&gt;_</span><span>Alex A. Junior</span></a><div className="footer-links">
-  <a href="https://www.linkedin.com/in/alexajuniorr">LinkedIn: Alex A. Junior</a>
+  <a href="https://urlgeni.us/linkedin/Yoqgm" target="_blank" rel="noreferrer">LinkedIn: Alex A. Junior</a>
   <a href="https://github.com/alexajunior" target="_blank" rel="noreferrer">GitHub</a>
   <a href="https://x.com/alexajuniorr" target="_blank" rel="noreferrer">X / Twitter</a>
 </div>
+
 <span className="footer-status"><i /> Available</span></div><div className="container footer-bottom"><span>© 2026 Alex A. Junior</span><a href="#top">Back to top ↑</a></div></footer>
     </div>
   );
