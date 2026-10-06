@@ -251,7 +251,7 @@ function App() {
       </main>
 
       <footer className="site-footer"><div className="container footer-top"><a className="brand" href="#top"><span className="brand-prompt">&gt;_</span><span>Alex A. Junior</span></a><div className="footer-links">
-  <a href="https://urlgeni.us/linkedin/Yoqgm" target="_blank" rel="noreferrer">LinkedIn: Alex A. Junior</a>
+  <a On LinkedIn: Alex A. Junior</a>
   <a href="https://github.com/alexajunior" target="_blank" rel="noreferrer">GitHub</a>
   <a href="https://x.com/alexajuniorr" target="_blank" rel="noreferrer">X / Twitter</a>
 </div>
