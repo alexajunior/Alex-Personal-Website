@@ -113,6 +113,23 @@ function IntroVideo() {
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
+  const openLinkedIn = (event) => {
+    event.preventDefault();
+    const profileUrl = "https://www.linkedin.com/in/alexajuniorr";
+    let fallbackTimer;
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        window.clearTimeout(fallbackTimer);
+        document.removeEventListener("visibilitychange", handleVisibilityChange);
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    fallbackTimer = window.setTimeout(() => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.location.assign(profileUrl);
+    }, 1200);
+    window.location.assign("linkedin://in/alexajuniorr");
+  };
 
   return (
     <div className="site-shell" id="top">
@@ -250,7 +267,7 @@ function App() {
         </section>
       </main>
 
-      <footer className="site-footer"><div className="container footer-top"><a className="brand" href="#top"><span className="brand-prompt">&gt;_</span><span>Alex A. Junior</span></a><div className="footer-links"><a href="https://www.linkedin.com/in/alexajuniorr">LinkedIn</a><a href="https://github.com/alexajunior" target="_blank" rel="noreferrer">GitHub</a><a href="https://x.com/alexajuniorr" target="_blank" rel="noreferrer">X / Twitter</a></div><span className="footer-status"><i /> Available</span></div><div className="container footer-bottom"><span>© 2026 Alex A. Junior</span><a href="#top">Back to top ↑</a></div></footer>
+      <footer className="site-footer"><div className="container footer-top"><a className="brand" href="#top"><span className="brand-prompt">&gt;_</span><span>Alex A. Junior</span></a><div className="footer-links"><a href="https://www.linkedin.com/in/alexajuniorr" onClick={openLinkedIn}>LinkedIn</a><a href="https://github.com/alexajunior" target="_blank" rel="noreferrer">GitHub</a><a href="https://x.com/alexajuniorr" target="_blank" rel="noreferrer">X / Twitter</a></div><span className="footer-status"><i /> Available</span></div><div className="container footer-bottom"><span>© 2026 Alex A. Junior</span><a href="#top">Back to top ↑</a></div></footer>
     </div>
   );
 }
