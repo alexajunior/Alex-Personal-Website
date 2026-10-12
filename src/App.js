@@ -130,8 +130,7 @@ function App() {
             <a href="#introductory-video" onClick={closeMenu}>Introductory video</a>
             <a href="#conferences" onClick={closeMenu}>Featured conferences</a>
             <a href="#about" onClick={closeMenu}>About Alex</a>
-            <a href="#speaker" onClick={closeMenu}>Public Speaking</a>
-            <a href="#blog" onClick={closeMenu}>Blog</a>
+            <a href="#speaker" onClick={closeMenu}>Blog</a>
             <a href="#faq" onClick={closeMenu}>FAQ</a>
             <a className="nav-button" href="#contact" onClick={closeMenu}>Let&apos;s talk <Arrow /></a>
           </nav>
@@ -217,12 +216,6 @@ function App() {
           </div>
         </section>
 
-        <section id="speaker" className="section speaker-section">
-          <div className="container speaker-grid">
-            <div className="section-kicker"><span>06</span><span>featured_speaker();</span></div>
-            <div className="speaker-content"><article className="speaker-card"><div className="speaker-card-label"><i /> Featured speaker</div><span className="speaker-card-type">Session</span><h2>Lessons from building tech in a low-connectivity community</h2><p>Most software assumes fast internet, cloud sync, and always-on connectivity. Alex A. Junior shares lessons from building CarbonSight, an offline-first carbon footprint tracker for low-connectivity communities—including architecture, data sync, conflict resolution, and the UX decisions that low-connectivity forces you to make.</p><div className="speaker-card-meta"><span>Speaker · Founder, Braveon AI</span><span>Building for communities with limited connectivity</span></div><a className="speaker-card-link" href="https://reg.githubuniverse.com/flow/github/universe26/attendee-portal/page/sessioncatalog/session/1775902696655001nnFo" target="_blank" rel="noreferrer">View Alex&apos;s session <Arrow /></a><strong className="speaker-stat">200+<small>YOUNG PEOPLE MENTORED</small></strong></article></div>
-          </div>
-        </section>
 
         <section id="certifications" className="section credentials-section">
           <div className="container">
