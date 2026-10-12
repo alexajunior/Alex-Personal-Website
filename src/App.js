@@ -7,7 +7,7 @@ const workAreas = [
   { number: "01", title: "Digital products", text: "Clear, useful experiences that help people get things done." },
   { number: "02", title: "Frontend engineering", text: "Fast, accessible interfaces built with care and attention to detail." },
   { number: "03", title: "Creative systems", text: "A thoughtful visual language that makes good ideas easier to understand." },
-  { number: "04", title: "Open collaboration", text: "Curious teams, honest communication, and work that ships." },
+  { number: "04", title: "Open collaboration", text: "Curious teams, honest communication, and work that ships" },
 ];
 
 const projects = [
