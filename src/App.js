@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import "./App.css";
 
 const Arrow = () => <span className="arrow" aria-hidden="true">↗</span>;
@@ -43,41 +43,6 @@ const faqs = [
 
 function IntroVideo() {
   const videoRef = useRef(null);
-  const [progress, setProgress] = useState(0);
-  const [volume, setVolume] = useState(0);
-  const [duration, setDuration] = useState(0);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return undefined;
-    const updateProgress = () => setProgress(video.duration ? video.currentTime / video.duration : 0);
-    const setVideoDuration = () => setDuration(video.duration || 0);
-    const syncVolume = () => setVolume(video.muted ? 0 : video.volume);
-    video.volume = 0;
-    video.muted = true;
-    video.addEventListener("timeupdate", updateProgress);
-    video.addEventListener("loadedmetadata", setVideoDuration);
-    video.addEventListener("volumechange", syncVolume);
-    return () => {
-      video.removeEventListener("timeupdate", updateProgress);
-      video.removeEventListener("loadedmetadata", setVideoDuration);
-      video.removeEventListener("volumechange", syncVolume);
-    };
-  }, []);
-
-  const seek = (event) => {
-    const video = videoRef.current;
-    if (video && duration) video.currentTime = Number(event.target.value) * duration;
-  };
-
-  const changeVolume = (event) => {
-    const nextVolume = Number(event.target.value);
-    setVolume(nextVolume);
-    if (videoRef.current) {
-      videoRef.current.muted = nextVolume === 0;
-      videoRef.current.volume = nextVolume;
-    }
-  };
 
   return (
     <div className="video-player">
@@ -85,11 +50,6 @@ function IntroVideo() {
         <source src="/alex-intro.mp4" type="video/mp4" />
         Your browser does not support the video player.
       </video>
-      <div className="video-controls" aria-label="Video controls">
-        <input className="video-progress" type="range" min="0" max="1" step="0.001" value={progress} onChange={seek} aria-label="Video progress" />
-        <button type="button" className="video-control-button" onClick={() => changeVolume({ target: { value: volume ? 0 : 1 } })} aria-label={volume ? "Mute video" : "Unmute video"}>{volume ? "🔊" : "🔇"}</button>
-        <input className="video-volume" type="range" min="0" max="1" step="0.01" value={volume} onChange={changeVolume} aria-label="Video volume" />
-      </div>
     </div>
   );
 }
