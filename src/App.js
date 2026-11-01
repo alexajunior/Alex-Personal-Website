@@ -97,7 +97,7 @@ function IntroVideo() {
   return (
     <div className="video-player">
       <video ref={videoRef} controls={false} playsInline preload="metadata" poster="/intro-poster.png" aria-label="Alex A. Junior introductory video">
-        <source src="/alex-intro.mov" type="video/quicktime" />
+        <source src="/alex-intro.mp4" type="video/mp4" />
         Your browser does not support the video player.
       </video>
       <div className="video-controls" aria-label="Video controls">
