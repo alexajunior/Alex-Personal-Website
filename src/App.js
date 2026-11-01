@@ -97,7 +97,7 @@ function IntroVideo() {
   return (
     <div className="video-player">
       <video ref={videoRef} controls={false} playsInline preload="metadata" poster="/intro-poster.png" aria-label="Alex A. Junior introductory video">
-        <source src="/intro.mp4" type="video/mp4" />
+        <source src="/alex-intro.mov" type="video/quicktime" />
         Your browser does not support the video player.
       </video>
       <div className="video-controls" aria-label="Video controls">
@@ -175,8 +175,9 @@ function App() {
         <section id="introductory-video" className="section video-section">
           <div className="container">
             <div className="section-kicker"><span>01</span><span>introductory_video();</span></div>
-            <div className="split-heading"><h2>Meet Alex<br /><em>in motion.</em></h2><p>A short introduction to Alex&apos;s work, ideas, and the problems he is building to solve.</p></div>
+            <div className="split-heading"><h2>Meet Alex</h2><p>A short introduction to Alex&apos;s work, ideas, and the problems he is building to solve.</p></div>
             <div className="video-frame"><IntroVideo /></div>
+            <p className="video-caption">Alex hosted a Hacktoberfest event by Major League Hacking, where he taught young developers about open-source contributions and development.</p>
           </div>
         </section>
 
