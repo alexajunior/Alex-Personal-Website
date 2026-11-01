@@ -11,7 +11,7 @@ const workAreas = [
 ];
 
 const projects = [
-  { number: "01", title: "CarbonSight", text: "AR carbon footprint mapping with blockchain verification.", url: "https://github.com/alexajunior/CarbonSight" },
+  { number: "01", title: "CarbonSight", text: "AR carbon footprint mapping with blockchain verification.", url: "https://carbonsight.xyz" },
   { number: "02", title: "Baseline Refactor Assistant", text: "A developer tool for making codebase refactors clearer and more reliable.", url: "https://github.com/alexajunior/baseline-refactor-assistant" },
   { number: "03", title: "NurseFlow", text: "AI for busy nurses, designed around practical clinical workflows.", url: "https://github.com/alexajunior/NurseFlow" },
   { number: "04", title: "AeroHealth", text: "Mobile and web experiences for accessible health technology.", url: "https://github.com/alexajunior/AeroHealth-Mobile-App" },
@@ -128,9 +128,8 @@ function App() {
             <a href="#work" onClick={closeMenu}>My work</a>
             <a href="#projects" onClick={closeMenu}>Projects</a>
             <a href="#introductory-video" onClick={closeMenu}>Introductory video</a>
-            <a href="#conferences" onClick={closeMenu}>Featured conferences</a>
             <a href="#about" onClick={closeMenu}>About Alex</a>
-            <a href="#speaker" onClick={closeMenu}>Blog</a>
+            <a href="#blog" onClick={closeMenu}>Blog</a>
             <a href="#faq" onClick={closeMenu}>FAQ</a>
             <a className="nav-button" href="#contact" onClick={closeMenu}>Let&apos;s talk <Arrow /></a>
           </nav>
@@ -181,18 +180,6 @@ function App() {
           </div>
         </section>
 
-        <section id="conferences" className="section conferences-section">
-          <div className="container">
-            <div className="section-kicker"><span>02</span><span>featured_conferences();</span></div>
-            <div className="split-heading"><h2>Featured<br /><em>conferences.</em></h2><p>Selected conferences and global communities where Alex has shared ideas and joined the conversation.</p></div>
-            <div className="conference-list">
-              <div><span>01</span><strong>AWS re:Invent 2025</strong><em>Conference</em></div>
-              <div><span>02</span><strong>Adobe Education Summit 2026</strong><em>Summit</em></div>
-              <div><span>03</span><strong>GitHub Universe 2026</strong><em>Conference</em></div>
-            </div>
-          </div>
-        </section>
-
         <section id="work" className="section section-dark">
           <div className="container">
             <div className="section-kicker"><span>03</span><span>my_work();</span></div>
@@ -212,10 +199,9 @@ function App() {
         <section id="about" className="section about-section">
           <div className="container about-grid">
             <div className="section-kicker"><span>05</span><span>about_alex();</span></div>
-            <div className="about-content"><p className="terminal-line"><span className="prompt">&gt;_</span> who_is_alex?</p><h2>Building for the people <span>overlooked.</span></h2><p className="large-copy">Alex is an innovator who builds technology that works where internet access is limited</p><p className="body-copy">Primarily with offline-first tools that help underserved communities in West Africa access climate data and education without reliable connectivity.</p><p className="body-copy">As founder of CarbonSight, he&apos;s shipped a carbon footprint tracker used by 1000+ people in low-resource environments, presented at AWS re:Invent 2025 and the World Bank Summit 2026(Online), proving that constraints can drive better engineering outcomes.</p><p className="body-copy">He is a Google Cloud Innovator, Tableau Ambassador, and Silver Award winner in the Queen&apos;s Commonwealth Essay Competition.</p><p className="body-copy">Through Braveon AI, his multi-venture startup studio, he works across a global network of Leadership and Vocational Orientation centers — with one throughline: making sure builders from underserved communities aren&apos;t excluded from emerging technology.</p><p className="body-copy">Beyond his technical work, Alex mentors more than 200 young people helping them build careers in tech.</p><p className="body-copy">When he&apos;s not building, you&apos;ll find him with a paper making art.</p><div className="stats"><div><strong>1,000+</strong><span>CarbonSight users</span></div><div><strong>200+</strong><span>Young people mentored</span></div><div><strong>3</strong><span>Featured conferences</span></div></div></div>
+            <div className="about-content"><p className="terminal-line"><span className="prompt">&gt;_</span> who_is_alex?</p><h2>Building for the people <span>overlooked.</span></h2><p className="large-copy">Alex is an innovator who builds technology that works where internet access is limited</p><p className="body-copy">Primarily with offline-first tools that help underserved communities in West Africa access climate data and education without reliable connectivity.</p><p className="body-copy">As founder of CarbonSight, he&apos;s shipped a carbon footprint tracker used by 1000+ people in low-resource environments, presented at AWS re:Invent 2025 and the World Bank Summit 2026 (Online), proving that constraints can drive better engineering outcomes.</p><p className="body-copy">He is a Google Cloud Innovator, Tableau Ambassador, and Silver Award winner in the Queen&apos;s Commonwealth Essay Competition.</p><p className="body-copy">Through Braveon AI, his multi-venture startup studio, he works across a global network of Leadership and Vocational Orientation centers — with one throughline: making sure builders from underserved communities aren&apos;t excluded from emerging technology.</p><p className="body-copy">Beyond his technical work, Alex mentors more than 200 young people helping them build careers in tech.</p><p className="body-copy">When he&apos;s not building, you&apos;ll find him with a paper making art.</p><div className="stats"><div><strong>1,000+</strong><span>CarbonSight users</span></div><div><strong>200+</strong><span>Young people mentored</span></div></div></div>
           </div>
         </section>
-
 
         <section id="certifications" className="section credentials-section">
           <div className="container">
@@ -243,15 +229,21 @@ function App() {
         </section>
       </main>
 
-      <footer className="site-footer"><div className="container footer-top"><a className="brand" href="#top"><span className="brand-prompt">&gt;_</span><span>Alex A. Junior</span></a><div className="footer-links">
-  <a On LinkedIn: Alex A. Junior</a>
-  <a href="https://github.com/alexajunior" target="_blank" rel="noreferrer">GitHub</a>
-  <a href="https://x.com/alexajuniorr" target="_blank" rel="noreferrer">X / Twitter</a>
-</div>
-
-<span className="footer-status"><i /> Available</span></div><div className="container footer-bottom"><span>© 2026 Alex A. Junior</span><a href="#top">Back to top ↑</a></div></footer>
+      <footer className="site-footer">
+        <div className="container footer-top">
+          <a className="brand" href="#top"><span className="brand-prompt">&gt;_</span><span>Alex A. Junior</span></a>
+          <div className="footer-links">
+            <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/alexajunior" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://x.com/alexajuniorr" target="_blank" rel="noreferrer">X / Twitter</a>
+          </div>
+          <span className="footer-status"><i /> Available</span>
+        </div>
+        <div className="container footer-bottom"><span>© 2026 Alex A. Junior</span><a href="#top">Back to top ↑</a></div>
+      </footer>
     </div>
   );
+
 }
 
 export default App;
