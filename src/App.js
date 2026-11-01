@@ -43,9 +43,8 @@ const faqs = [
 
 function IntroVideo() {
   const videoRef = useRef(null);
-  const [playing, setPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [volume, setVolume] = useState(1);
+  const [volume, setVolume] = useState(0);
   const [duration, setDuration] = useState(0);
 
   useEffect(() => {
@@ -54,31 +53,17 @@ function IntroVideo() {
     const updateProgress = () => setProgress(video.duration ? video.currentTime / video.duration : 0);
     const setVideoDuration = () => setDuration(video.duration || 0);
     const syncVolume = () => setVolume(video.muted ? 0 : video.volume);
-    video.volume = 1;
-    video.muted = false;
+    video.volume = 0;
+    video.muted = true;
     video.addEventListener("timeupdate", updateProgress);
     video.addEventListener("loadedmetadata", setVideoDuration);
     video.addEventListener("volumechange", syncVolume);
-    video.addEventListener("ended", () => setPlaying(false));
     return () => {
       video.removeEventListener("timeupdate", updateProgress);
       video.removeEventListener("loadedmetadata", setVideoDuration);
       video.removeEventListener("volumechange", syncVolume);
     };
   }, []);
-
-  const togglePlayback = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    if (video.paused) {
-      video.muted = false;
-      video.volume = volume || 1;
-      video.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
-    } else {
-      video.pause();
-      setPlaying(false);
-    }
-  };
 
   const seek = (event) => {
     const video = videoRef.current;
@@ -96,12 +81,11 @@ function IntroVideo() {
 
   return (
     <div className="video-player">
-      <video ref={videoRef} controls={false} playsInline preload="metadata" poster="/intro-poster.png" aria-label="Alex A. Junior introductory video">
+      <video ref={videoRef} autoPlay loop muted controls={false} playsInline preload="metadata" controlsList="nodownload noplaybackrate" disablePictureInPicture onContextMenu={(event) => event.preventDefault()} aria-label="Alex A. Junior introductory video">
         <source src="/alex-intro.mp4" type="video/mp4" />
         Your browser does not support the video player.
       </video>
       <div className="video-controls" aria-label="Video controls">
-        <button type="button" className="video-control-button" onClick={togglePlayback} aria-label={playing ? "Pause video" : "Play video"}>{playing ? "❚❚" : "▶"}</button>
         <input className="video-progress" type="range" min="0" max="1" step="0.001" value={progress} onChange={seek} aria-label="Video progress" />
         <button type="button" className="video-control-button" onClick={() => changeVolume({ target: { value: volume ? 0 : 1 } })} aria-label={volume ? "Mute video" : "Unmute video"}>{volume ? "🔊" : "🔇"}</button>
         <input className="video-volume" type="range" min="0" max="1" step="0.01" value={volume} onChange={changeVolume} aria-label="Video volume" />
