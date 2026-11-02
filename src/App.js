@@ -170,7 +170,7 @@ function App() {
         </section>
 
         <section id="contact" className="cta-section">
-          <div className="container cta-inner"><div className="section-kicker"><span>08</span><span>contact();</span></div><p className="terminal-line"><span className="prompt">&gt;_</span> start_a_conversation();</p><h2>Have an idea?<br /><span>Let&apos;s make it real.</span></h2><div className="cta-actions"><a className="button button-green" href="mailto:younginnovatorr@gmail.com">Email <Arrow /></a><a className="button button-outline" href="https://calendly.com/younginnovatorr" target="_blank" rel="noreferrer">Book a call <Arrow /></a></div></div>
+          <div className="container cta-inner"><div className="section-kicker"><span>08</span><span>contact();</span></div><p className="terminal-line"><span className="prompt">&gt;_</span> start_a_conversation();</p><h2>Have an idea?<br /><span>Let&apos;s make it real.</span></h2><div className="cta-actions"><a className="button button-green" href="mailto:younginnovatorr@gmail.com">Email <Arrow /></a><a className="button button-outline" href="https://calendly.com/younginnovatorr/30min" target="_blank" rel="noreferrer">Book a call <Arrow /></a></div></div>
         </section>
       </main>
 
