@@ -161,7 +161,7 @@ function App() {
           <div className="container">
             <div className="section-kicker"><span>06</span><span>the_blog();</span></div>
             <div className="split-heading"><h2>Notes from<br /><em>the edge.</em></h2><p>Writing on offline-first technology, climate data, education, and building from underserved communities.</p></div>
-            <div className="blog-card"><span className="card-number">COMING SOON</span><h3>Stories about making technology work everywhere.</h3><p>Alex&apos;s essays and field notes will appear here.</p><a className="text-link" href="mailto:alexjuniorantwi1@gmail.com">Email <Arrow /></a></div>
+            <div className="blog-card"><span className="card-number">COMING SOON</span><h3>Stories about making technology work everywhere.</h3><p>Alex&apos;s essays and field notes will appear here.</p><a className="text-link" href="mailto:younginnovatorr@gmail.com">Email <Arrow /></a></div>
           </div>
         </section>
 
@@ -170,7 +170,7 @@ function App() {
         </section>
 
         <section id="contact" className="cta-section">
-          <div className="container cta-inner"><div className="section-kicker"><span>08</span><span>contact();</span></div><p className="terminal-line"><span className="prompt">&gt;_</span> start_a_conversation();</p><h2>Have an idea?<br /><span>Let&apos;s make it real.</span></h2><div className="cta-actions"><a className="button button-green" href="mailto:alexjuniorantwi1@gmail.com">Email <Arrow /></a><a className="button button-outline" href="https://calendly.com/alexjuniorantwi1" target="_blank" rel="noreferrer">Book a call <Arrow /></a></div></div>
+          <div className="container cta-inner"><div className="section-kicker"><span>08</span><span>contact();</span></div><p className="terminal-line"><span className="prompt">&gt;_</span> start_a_conversation();</p><h2>Have an idea?<br /><span>Let&apos;s make it real.</span></h2><div className="cta-actions"><a className="button button-green" href="mailto:younginnovatorr@gmail.com">Email <Arrow /></a><a className="button button-outline" href="https://calendly.com/younginnovatorr" target="_blank" rel="noreferrer">Book a call <Arrow /></a></div></div>
         </section>
       </main>
 
