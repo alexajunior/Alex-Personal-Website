@@ -44,9 +44,34 @@ const faqs = [
 function IntroVideo() {
   const videoRef = useRef(null);
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return undefined;
+
+    video.muted = true;
+    const startPlayback = () => {
+      const playback = video.play();
+      if (playback) {
+        playback.catch((error) => {
+          if (error.name !== "NotAllowedError") {
+            console.error("Intro video playback failed.", error);
+          }
+        });
+      }
+    };
+
+    if (video.readyState >= 2) {
+      startPlayback();
+    } else {
+      video.addEventListener("canplay", startPlayback, { once: true });
+    }
+
+    return () => video.removeEventListener("canplay", startPlayback);
+  }, []);
+
   return (
     <div className="video-player">
-      <video ref={videoRef} autoPlay loop muted controls={false} playsInline preload="metadata" controlsList="nodownload noplaybackrate" disablePictureInPicture onContextMenu={(event) => event.preventDefault()} aria-label="Alex A. Junior introductory video">
+      <video ref={videoRef} autoPlay loop muted controls={false} playsInline preload="auto" controlsList="nodownload noplaybackrate" disablePictureInPicture onContextMenu={(event) => event.preventDefault()} aria-label="Alex A. Junior introductory video">
         <source src="/alex-intro.mp4" type="video/mp4" />
         Your browser does not support the video player.
       </video>

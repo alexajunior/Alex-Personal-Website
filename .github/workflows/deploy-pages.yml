@@ -28,6 +28,9 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+        env:
+          REACT_APP_POSTHOG_KEY: ${{ secrets.REACT_APP_POSTHOG_KEY }}
+          REACT_APP_POSTHOG_HOST: ${{ secrets.REACT_APP_POSTHOG_HOST || 'https://us.i.posthog.com' }}
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
