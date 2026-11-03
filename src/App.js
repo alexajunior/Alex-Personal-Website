@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
 
 const Arrow = () => <span className="arrow" aria-hidden="true">↗</span>;
