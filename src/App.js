@@ -205,7 +205,6 @@ function App() {
           <div className="footer-links">
             <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://github.com/alexajunior" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://x.com/alexajuniorr" target="_blank" rel="noreferrer">X / Twitter</a>
           </div>
           <span className="footer-status"><i /> Available</span>
         </div>
