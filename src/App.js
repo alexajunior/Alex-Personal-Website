@@ -61,18 +61,23 @@ function IntroVideo() {
       }
     };
 
-    if (video.readyState >= 2) {
-      startPlayback();
-    } else {
-      video.addEventListener("canplay", startPlayback, { once: true });
-    }
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") startPlayback();
+    };
 
-    return () => video.removeEventListener("canplay", startPlayback);
+    video.addEventListener("loadeddata", startPlayback, { once: true });
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    startPlayback();
+
+    return () => {
+      video.removeEventListener("loadeddata", startPlayback);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
   }, []);
 
   return (
     <div className="video-player">
-      <video ref={videoRef} autoPlay loop muted controls={false} playsInline preload="auto" controlsList="nodownload noplaybackrate" disablePictureInPicture onContextMenu={(event) => event.preventDefault()} aria-label="Alex A. Junior introductory video">
+      <video ref={videoRef} autoPlay loop muted playsInline preload="auto" poster={publicAsset("intro-poster.png")} controls={false} controlsList="nodownload noplaybackrate" disablePictureInPicture onContextMenu={(event) => event.preventDefault()} aria-label="Alex A. Junior introductory video">
         <source src={publicAsset("alex-intro.mp4")} type="video/mp4" />
         Your browser does not support the video player.
       </video>
