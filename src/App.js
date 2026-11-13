@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
 
+const publicAsset = (name) => `${process.env.PUBLIC_URL || "."}/${name}`;
 const Arrow = () => <span className="arrow" aria-hidden="true">↗</span>;
 
 const workAreas = [
@@ -72,7 +73,7 @@ function IntroVideo() {
   return (
     <div className="video-player">
       <video ref={videoRef} autoPlay loop muted controls={false} playsInline preload="auto" controlsList="nodownload noplaybackrate" disablePictureInPicture onContextMenu={(event) => event.preventDefault()} aria-label="Alex A. Junior introductory video">
-        <source src="/alex-intro.mp4" type="video/mp4" />
+        <source src={publicAsset("alex-intro.mp4")} type="video/mp4" />
         Your browser does not support the video player.
       </video>
     </div>
@@ -118,7 +119,7 @@ function App() {
             <div className="hero-meta"><span>Available</span><span>Scroll to explore ↓</span></div>
           </div>
           <div className="hero-grid" aria-hidden="true"><span /><span /><span /><span /><span /><span /></div>
-          <img className="hero-portrait" src="/alex-reference-portrait.png" alt="Alex A. Junior" />
+          <img className="hero-portrait" src={publicAsset("alex-reference-portrait.png")} alt="Alex A. Junior" />
         </section>
 
         <section className="signal-strip" aria-label="Areas of focus">
